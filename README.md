@@ -37,20 +37,21 @@ Translate scores into actionable customer segments:
 | Score Range | Segment | Description |
 |-------------|---------|-------------|
 | 27 – 30 | 🏆 **Champion** | Bought recently, buy often, spend the most |
-| 21 – 26 | ⭐ **Loyal Customer** | Regular buyers with strong engagement |
-| 15 – 20 | 🌱 **Potential Loyalist** | Recent customers with growth potential |
-| 10 – 14 | ⚠️ **At Risk** | Were good customers but haven't returned |
-| 3 – 9 | 💤 **Inactive / Lost** | Low scores across all three dimensions |
+| 21 – 26 | ⭐ **Loyal Customers** | Regular buyers with strong engagement and consistent spend |
+| 18 – 20 | 🌱 **Potential Loyalists** | Recent customers with growing frequency |
+| 15 – 17 | 🌟 **Promising** | Showed recent activity with growing spend potential - keep them engaged |
+| 10 – 14 | 🔔 **Engaged** | Interact regularly but haven't reached their full value yet  |
+| 7 – 9 |   🔎 **Requires Attention** | Decent history but showing early signs of disengagement — re-engage proactively |
+| 3 – 6 |   ⚠️ **At Risk** | Were once good customers but haven't returned — act quickly with campaigns |
+| <3 |      💤 ** Inactive / Lost** | Low scores across all dimensions — minimal recent activity, hardest to recover |
 
 A score of **30** = perfect Champion. A score of **3** = least engaged customer.
 
 ---
 
 ## 📈 Dashboard Visuals (Power BI)
-    <img width="1164" height="651" alt="Screenshot 2026-05-20 150902" src="https://github.com/user-attachments/assets/0afc97b5-a89f-42f2-8e6a-c3e17fe8a415" />
-
-
     
+
 The analysis is visualised through three Power BI components:
 
 ### 1. 📊 Customer Distribution by Segment *(Bar Chart)*
