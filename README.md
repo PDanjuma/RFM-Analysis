@@ -43,7 +43,7 @@ Translate scores into actionable customer segments:
 | 10 – 14 | 🔔 **Engaged** | Interact regularly but haven't reached their full value yet  |
 | 7 – 9 |   🔎 **Requires Attention** | Decent history but showing early signs of disengagement — re-engage proactively |
 | 3 – 6 |   ⚠️ **At Risk** | Were once good customers but haven't returned — act quickly with campaigns |
-| <3 |      💤 ** Inactive / Lost** | Low scores across all dimensions — minimal recent activity, hardest to recover |
+| < 3 |     💤 ** Inactive / Lost** | Low scores across all dimensions — minimal recent activity, hardest to recover |
 
 A score of **30** = perfect Champion. A score of **3** = least engaged customer.
 
@@ -56,7 +56,8 @@ The analysis is visualised through three Power BI components:
 
 ### 1. 📊 Customer Distribution by Segment *(Bar Chart)*
 Shows the count of customers in each RFM segment — quickly reveals where the bulk of your customer base sits and which segments need attention.
-    <img width="557" height="508" alt="Screenshot 2026-05-20 150928" src="https://github.com/user-attachments/assets/8aa45460-fe48-4d7c-9c5d-d0c65d222aac" />
+    
+<img width="557" height="508" alt="Screenshot 2026-05-20 150928" src="https://github.com/user-attachments/assets/8aa45460-fe48-4d7c-9c5d-d0c65d222aac" />
 
 
 ### 2. 🎯 KPI Cards
@@ -64,7 +65,8 @@ At-a-glance metrics including:
 - Total number of customers analysed
 - Average RFM score across the base
 - Proportion of Champions vs At-Risk customers
- <img width="294" height="135" alt="Screenshot 2026-05-20 202632" src="https://github.com/user-attachments/assets/03227909-3e89-4965-96d8-d16cc9525370" />
+
+<img width="294" height="135" alt="Screenshot 2026-05-20 202632" src="https://github.com/user-attachments/assets/03227909-3e89-4965-96d8-d16cc9525370" />
  
 
 ### 3. 📋 RFM Segmentation Table
