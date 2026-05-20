@@ -1,6 +1,6 @@
 # 📊 RFM Customer Segmentation Analysis
 
-> **Behaviour-based customer segmentation using Recency, Frequency & Monetary scoring — powered by real transactional data.**
+ **Behaviour-based customer segmentation using Recency, Frequency & Monetary scoring — powered by real transactional data.**
 
 ---
 
