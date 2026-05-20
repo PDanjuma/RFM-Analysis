@@ -26,7 +26,7 @@ Score each dimension using **decile ranks (1–10)**, where:
 - **10 = best** performance on that dimension
 - **1 = worst** performance on that dimension
 
-> 1–10 decile scoring is used for finer granularity compared to simpler quintile approaches.
+1–10 decile scoring is used for finer granularity compared to simpler quintile approaches.
 
 ### Step 3 — Combine into a Single RFM Score
 Sum R + F + M to produce a **3–30 composite RFM score**.
@@ -42,22 +42,28 @@ Translate scores into actionable customer segments:
 | 10 – 14 | ⚠️ **At Risk** | Were good customers but haven't returned |
 | 3 – 9 | 💤 **Inactive / Lost** | Low scores across all three dimensions |
 
-> A score of **30** = perfect Champion. A score of **3** = least engaged customer.
+A score of **30** = perfect Champion. A score of **3** = least engaged customer.
 
 ---
 
 ## 📈 Dashboard Visuals (Power BI)
+    <img width="1164" height="651" alt="Screenshot 2026-05-20 150902" src="https://github.com/user-attachments/assets/feec9483-2236-4a87-822b-a13a236c0849" />
 
+    
 The analysis is visualised through three Power BI components:
 
 ### 1. 📊 Customer Distribution by Segment *(Bar Chart)*
 Shows the count of customers in each RFM segment — quickly reveals where the bulk of your customer base sits and which segments need attention.
+    <img width="557" height="508" alt="Screenshot 2026-05-20 150928" src="https://github.com/user-attachments/assets/8aa45460-fe48-4d7c-9c5d-d0c65d222aac" />
+
 
 ### 2. 🎯 KPI Cards
 At-a-glance metrics including:
 - Total number of customers analysed
 - Average RFM score across the base
 - Proportion of Champions vs At-Risk customers
+ <img width="294" height="135" alt="Screenshot 2026-05-20 202632" src="https://github.com/user-attachments/assets/03227909-3e89-4965-96d8-d16cc9525370" />
+ 
 
 ### 3. 📋 RFM Segmentation Table
 Full customer-level breakdown with individual R, F, M scores, composite RFM score, and assigned segment label — enabling direct CRM action or export.
@@ -70,3 +76,12 @@ Full customer-level breakdown with individual R, F, M scores, composite RFM scor
 |------|---------|
 | **SQL** | Data extraction, RFM calculation, decile ranking |
 | **Power BI** | Dashboard, visualisations, segmentation table |
+
+---
+
+## 💡 Why RFM?
+
+- ✅ **Works with any transactional data** — e-commerce, subscriptions, retail, SaaS
+- ✅ **Easy to build** — if you have order history, RFM can be built in SQL
+- ✅ **Easy to automate** — once built, the model can be scheduled and fed directly into your CRM for automated lifecycle campaigns
+- ✅ **Fully behaviour-based** — every score is derived purely from real purchase behaviour. No surveys. No assumptions.
