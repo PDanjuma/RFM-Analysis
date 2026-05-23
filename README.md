@@ -18,20 +18,20 @@ RFM is a **behaviour-based customer segmentation method** that ranks every custo
 
 ## ⚙️ How RFM Scoring Works
 
-### Step 1 — Compute R, F, M
+### Step 1: Compute R, F, M
 Calculate **recency**, **frequency**, and **monetary** values per customer from order history.
 
-### Step 2 — Assign Decile Ranks
+### Step 2: Assign Decile Ranks
 Score each dimension using **decile ranks (1–10)**, where:
 - **10 = best** performance on that dimension
 - **1 = worst** performance on that dimension
 
 1–10 decile scoring is used for finer granularity compared to simpler quintile approaches.
 
-### Step 3 — Combine into a Single RFM Score
+### Step 3: Combine into a Single RFM Score
 Sum R + F + M to produce a **3–30 composite RFM score**.
 
-### Step 4 — Map to Segments
+### Step 4: Map to Segments
 Translate scores into actionable customer segments:
 
 | Score Range | Segment | Description |
