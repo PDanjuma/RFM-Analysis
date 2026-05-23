@@ -51,8 +51,7 @@ A score of **30** = perfect Champion. A score of **3** = least engaged customer.
 
 ## 📈 Dashboard Visuals (Power BI)
 
-<img width="1164" height="651" alt="Screenshot 2026-05-20 150902" src="https://github.com/user-attachments/assets/fbaeab24-86b7-4209-9d27-db50b30d28ef" />
-
+<img width="1425" height="799" alt="Screenshot 2026-05-23 233834" src="https://github.com/user-attachments/assets/03089afd-eeae-4892-8f41-126dcf4a29c1" />
 
 The analysis is visualised through three Power BI components:
 
@@ -65,11 +64,11 @@ Shows the count of customers in each RFM segment — quickly reveals where the b
 ### 2. 🎯 KPI Cards
 At-a-glance metrics including:
 - Total number of customers analysed
-- Average RFM score across the base
-- Proportion of Champions vs At-Risk customers
+<img width="179" height="125" alt="Screenshot 2026-05-23 233519" src="https://github.com/user-attachments/assets/11e7d732-7e69-4497-936a-cce6662a5e1a" />
 
-<img width="294" height="135" alt="Screenshot 2026-05-20 202632" src="https://github.com/user-attachments/assets/03227909-3e89-4965-96d8-d16cc9525370" />
- 
+- Average RFM score across the base
+<img width="178" height="124" alt="Screenshot 2026-05-23 233538" src="https://github.com/user-attachments/assets/9c857bd2-a031-4c43-a603-fa11c43c607b" />
+
 
 ### 3. 📋 RFM Segmentation Table
 Full customer-level breakdown with individual R, F, M scores, composite RFM score, and assigned segment label — enabling direct CRM action or export.
