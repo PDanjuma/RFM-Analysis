@@ -41,9 +41,9 @@ Translate scores into actionable customer segments:
 | 18 – 20 |  **Potential Loyalists** | Recent customers with growing frequency |
 | 15 – 17 |  **Promising** | Showed recent activity with growing spend potential - keep them engaged |
 | 10 – 14 |  **Engaged** | Interact regularly but haven't reached their full value yet  |
-| 7 – 9 |    **Requires Attention** | Decent history but showing early signs of disengagement — re-engage proactively |
-| 3 – 6 |    **At Risk** | Were once good customers but haven't returned — act quickly with campaigns |
-| < 3 |      **Inactive / Lost** | Low scores across all dimensions — minimal recent activity, hardest to recover |
+| 7 – 9 |    **Requires Attention** | Decent history but showing early signs of disengagement - re-engage proactively |
+| 3 – 6 |    **At Risk** | Were once good customers but haven't returned - act quickly with campaigns |
+| < 3 |      **Inactive / Lost** | Low scores across all dimensions - minimal recent activity, hardest to recover |
 
 A score of **30** = perfect Champion. A score of **3** = least engaged customer.
 
