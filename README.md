@@ -50,7 +50,9 @@ A score of **30** = perfect Champion. A score of **3** = least engaged customer.
 ---
 
 ## 📈 Dashboard Visuals (Power BI)
-    
+
+<img width="1164" height="651" alt="Screenshot 2026-05-20 150902" src="https://github.com/user-attachments/assets/fbaeab24-86b7-4209-9d27-db50b30d28ef" />
+
 
 The analysis is visualised through three Power BI components:
 
