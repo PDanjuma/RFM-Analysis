@@ -1,0 +1,106 @@
+-- Step 1: Append all monthly sales tables together
+CREATE TABLE [sales].[2025]
+(
+OrderID NVARCHAR(50),
+CustomerID NVARCHAR(50),
+OrderDate DATE,
+ProductType NVARCHAR(50),
+OrderValue FLOAT
+);
+INSERT INTO [sales].[2025]
+SELECT * FROM [sales].[202501]
+UNION ALL SELECT * FROM [sales].[202502]
+UNION ALL SELECT * FROM [sales].[202503]
+UNION ALL SELECT * FROM [sales].[202504]
+UNION ALL SELECT * FROM [sales].[202505]
+UNION ALL SELECT * FROM [sales].[202506]
+UNION ALL SELECT * FROM [sales].[202507]
+UNION ALL SELECT * FROM [sales].[202508]
+UNION ALL SELECT * FROM [sales].[202509]
+UNION ALL SELECT * FROM [sales].[202510]
+UNION ALL SELECT * FROM [sales].[202511]
+UNION ALL SELECT * FROM [sales].[202512];
+
+-- Step 2: Calculate recency, frequency, monetary, r, f, m ranks
+-- Combine views with CTEs
+IF OBJECT_ID ('sales.rfm_metrics', 'V') IS NOT NULL
+DROP VIEW sales.rfm_metrics
+GO
+CREATE VIEW sales.rfm_metrics AS
+WITH rfm AS 
+(
+	SELECT
+		CustomerID,
+		MAX(OrderDate) AS last_order_date,
+		DATEDIFF(day, MAX(OrderDate), GETDATE()) AS recency,
+		COUNT(*) AS frequency,
+		SUM(OrderValue) AS monetary
+	FROM [sales].[2025]
+	GROUP BY CustomerID
+)
+SELECT 
+	*,
+	DENSE_RANK() OVER(ORDER BY recency ASC) AS r_rank,
+	DENSE_RANK() OVER(ORDER BY frequency DESC) AS f_rank,
+	DENSE_RANK() OVER(ORDER BY monetary DESC) AS m_rank
+FROM rfm;
+
+-- Step 3: Assigning deciles (10 = best, 1 = worst)
+IF OBJECT_ID ('sales.rfm_scores', 'V') IS NOT NULL
+DROP VIEW sales.rfm_scores
+GO
+CREATE VIEW sales.rfm_scores AS
+SELECT
+	*,
+	NTILE(10) OVER(ORDER BY r_rank DESC) AS r_score,
+	NTILE(10) OVER(ORDER BY f_rank DESC) AS f_score,
+	NTILE(10) OVER(ORDER BY m_rank DESC) AS m_score
+FROM sales.rfm_metrics;
+
+-- Step 4: total score
+IF OBJECT_ID ('sales.rfm_total_scores', 'V') IS NOT NULL
+DROP VIEW sales.rfm_total_scores
+GO
+CREATE VIEW sales.rfm_total_scores AS
+SELECT
+	CustomerID,
+	recency,
+	frequency,
+	monetary,
+	r_score,
+	f_score,
+	m_score,
+	(r_score + f_score + m_score) AS rfm_total_score
+FROM sales.rfm_scores;
+
+
+-- Step 5: BI ready rfm segments table
+IF OBJECT_ID ('sales.rfm_segments_final', 'U') IS NOT NULL
+DROP TABLE sales.rfm_segments_final
+GO
+CREATE TABLE sales.rfm_segments_final
+(
+CustomerID NVARCHAR(50),
+recency INTEGER,
+frequency INTEGER,
+monetary FLOAT,
+r_score INTEGER,
+f_score INTEGER,
+m_score INTEGER,
+rfm_total_score INTEGER,
+rfm_segment NVARCHAR(50)
+)
+INSERT INTO sales.rfm_segments_final
+SELECT
+	*,
+	CASE
+		WHEN rfm_total_score >= 27 THEN 'Champions' -- 27-30
+		WHEN rfm_total_score >= 21 THEN 'Loyal Customers'
+		WHEN rfm_total_score >= 18 THEN 'Potential Loyalists'
+		WHEN rfm_total_score >= 15 THEN 'Promising'
+		WHEN rfm_total_score >= 10 THEN 'Engaged'
+		WHEN rfm_total_score >= 7 THEN  'Requires Attention'
+		WHEN rfm_total_score >= 3 THEN  'At Risk'
+		ELSE 'Inactive/Lost'
+	END AS rfm_segment
+FROM sales.rfm_total_scores;
