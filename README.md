@@ -71,7 +71,8 @@ At-a-glance metrics including:
 
 
 ### 3. 📋 RFM Segmentation Table
-Full customer-level breakdown with individual R, F, M scores, composite RFM score, and assigned segment label — enabling direct CRM action or export.
+Full customer-level breakdown with individual R, F, M scores, total RFM score, and assigned segment label.
+<img width="809" height="791" alt="Screenshot 2026-05-23 234253" src="https://github.com/user-attachments/assets/cf054afb-bdb0-451a-b921-bdac6b1a003c" />
 
 ---
 
