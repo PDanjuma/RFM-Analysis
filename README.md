@@ -56,13 +56,13 @@ A score of **30** = perfect Champion. A score of **3** = least engaged customer.
 
 The analysis is visualised through three Power BI components:
 
-### 1. 📊 Customer Distribution by Segment *(Bar Chart)*
+### 1. Customer Distribution by Segment *(Bar Chart)*
 Shows the count of customers in each RFM segment — quickly reveals where the bulk of your customer base sits and which segments need attention.
     
 <img width="557" height="508" alt="Screenshot 2026-05-20 150928" src="https://github.com/user-attachments/assets/8aa45460-fe48-4d7c-9c5d-d0c65d222aac" />
 
 
-### 2. 🎯 KPI Cards
+### 2. KPI Cards
 At-a-glance metrics including:
 - Total number of customers analysed
 <img width="179" height="125" alt="Screenshot 2026-05-23 233519" src="https://github.com/user-attachments/assets/11e7d732-7e69-4497-936a-cce6662a5e1a" />
@@ -71,7 +71,7 @@ At-a-glance metrics including:
 <img width="178" height="124" alt="Screenshot 2026-05-23 233538" src="https://github.com/user-attachments/assets/9c857bd2-a031-4c43-a603-fa11c43c607b" />
 
 
-### 3. 📋 RFM Segmentation Table
+### 3. RFM Segmentation Table
 Full customer-level breakdown with individual R, F, M scores, total RFM score, and assigned segment label.
 <img width="809" height="791" alt="Screenshot 2026-05-23 234253" src="https://github.com/user-attachments/assets/cf054afb-bdb0-451a-b921-bdac6b1a003c" />
 
